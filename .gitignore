@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+*.pkl
+
+node_modules/
+build/
+dist/
+
+.DS_Store
