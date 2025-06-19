@@ -19,20 +19,20 @@ vectorizer = pickle.load(open(vectorizer_path, "rb"))
 
 @app.route('/')
 def home():
-    return "Fake News Classifier is Running!"
+    return "Fake News Detector is Running!"
 
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()
-    text = data.get("text")
+    headline = data.get("headline")
 
-    if not text:
-        return jsonify({"error": "No text provided"}), 400
+    if not headline:
+        return jsonify({"error": "No headline provided"}), 400
 
-    vect_text = vectorizer.transform([text])
+    vect_headline = vectorizer.transform([headline])
 
-    prediction = model.predict(vect_text)[0]
-    probabilities = model.predict_proba(vect_text)[0]
+    prediction = model.predict(vect_headline)[0]
+    probabilities = model.predict_proba(vect_headline)[0]
     confidence = round(max(probabilities)*100, 2)
 
     return jsonify({
