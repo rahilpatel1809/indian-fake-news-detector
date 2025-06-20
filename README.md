@@ -131,7 +131,7 @@ npm start
 ```
 The React app will typically open automatically in your browser at http://localhost:3000.
 
-(Note: When running both frontend and backend locally, ensure your frontend's API calls are pointed to http://localhost:5000 or whatever port your Flask backend is running on locally. For deployed versions, they use the Render URL.)
+(Note: When running both frontend and backend locally, ensure your frontend's API calls are pointed to http://localhost:5000 or whatever port your Flask backend is running on locally. For deployed versions, use the Render URL.)
 
 Feel free to connect with me:
 [Rahil Patel](https://www.linkedin.com/in/rahilpatel1809/)
