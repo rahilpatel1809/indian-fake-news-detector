@@ -9,6 +9,19 @@ Experience the live application:
 * **Frontend (User Interface):** [https://indian-fake-news-detector.vercel.app](https://indian-fake-news-detector.vercel.app)
 * **Backend (API Endpoint):** [https://indian-fake-news-detector.onrender.com](https://indian-fake-news-detector.onrender.com)
 
+## Screenshots
+
+Due to Render’s free tier limitations, the backend API goes to sleep after a few minutes of inactivity. It may take 30–60 seconds to restart on the first request.
+
+To give you an idea of how the app works, here are some screenshots of the interface and predictions:
+
+### Fake News Prediction Example
+<img src="detection-1.png" alt="Fake News Detection" width="800">
+
+### Dataset Viewer
+<img src="dataset-1.png" alt="Dataset Viewer" width="800">
+
+
 ## Features
 
 * Detects fake/real news headlines using a pre-trained machine learning model.
@@ -33,6 +46,7 @@ This project leverages a modern full-stack architecture:
 * **Model Serialization:** Pickle
 * **WSGI Server:** Gunicorn
 * **CORS Handling:** Flask-CORS
+* **API Testing:** Postman
 * **Package Manager:** pip
 
 ### Data Source
@@ -92,7 +106,7 @@ python train_model.py
 ```
 ### Run the Flask Backend Server:
 ```
-# For local development with Flask's built-in server (useful for debugging):
+# For local development with Flask's built-in server:
 python app.py
 ```
 ### For a production-like local environment using Gunicorn:
