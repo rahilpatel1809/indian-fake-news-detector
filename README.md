@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# FactCheck: Fake News Detector
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full-stack web application designed to detect fake news headlines. It features a React frontend for user interaction and a Flask backend powered by a machine learning model for prediction.
 
-## Available Scripts
+## Live Demo
 
-In the project directory, you can run:
+Experience the live application:
 
-### `npm start`
+* **Frontend (User Interface):** [https://indian-fake-news-detector.vercel.app](https://indian-fake-news-detector.vercel.app)
+* **Backend (API Endpoint):** [https://indian-fake-news-detector.onrender.com](https://indian-fake-news-detector.onrender.com)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Detects fake/real news headlines using a pre-trained machine learning model.
+* Provides confidence scores for predictions (e.g., "Fake: 95.23%", "Real: 4.77%").
+* Interactive and responsive user interface built with React.js and Tailwind CSS.
+* Includes a dark/light mode toggle for enhanced user experience.
+* Displays a "Dataset Viewer" page for exploring examples of news headlines.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project leverages a modern full-stack architecture:
 
-### `npm run build`
+### Frontend
+* **Framework:** React.js (created with Create React App)
+* **Styling:** Tailwind CSS
+* **CSV Parsing:** Papaparse
+* **Package Manager:** npm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend
+* **Framework:** Flask (Python)
+* **Data Handling:** Pandas
+* **Machine Learning:** Scikit-learn (Logistic Regression, TfidfVectorizer)
+* **Model Serialization:** Pickle
+* **WSGI Server:** Gunicorn
+* **CORS Handling:** Flask-CORS
+* **Package Manager:** pip
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Data Source
+* **Dataset:** [Fake and Real News Dataset on Kaggle](https://www.kaggle.com/datasets/imbikramsaha/fake-real-news/data)
+    *(The processed `news_dataset.csv` is included in the `backend/` directory.)*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Deployment & Version Control
+* **Frontend Hosting:** Vercel
+* **Backend Hosting:** Render
+* **Version Control:** Git
+* **Repository Hosting:** GitHub
 
-### `npm run eject`
+## Local Setup and Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To run this project on your local machine for development, follow these steps:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Clone the repository
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+First, clone the project from GitHub and navigate into the main directory:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone [https://github.com/rahilpatel1809/indian-fake-news-detector.git](https://github.com/rahilpatel1809/indian-fake-news-detector.git)
+cd indian-fake-news-detector
+```
 
-## Learn More
+### 2. Backend Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Navigate to the backend directory, set up a virtual environment, install dependencies, ensure the dataset is present, train the model, and start the server.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+cd backend
+```
 
-### Code Splitting
+Create and Activate Virtual Environment (Recommended):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### On Windows:
+```
+python -m venv venv
+.\venv\Scripts\activate
+```
+#### On macOS/Linux:
+```
+python3 -m venv venv
+source venv/bin/activate
+```
 
-### Analyzing the Bundle Size
+Install Backend Dependencies:
+```
+pip install -r requirements.txt
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Ensure Dataset is Present:
+Make sure the news_dataset.csv file is present in the backend/ directory. This file is crucial for train_model.py. If it's not present from the clone, you might need to download it from the Kaggle link provided above and place it in the backend/ folder.
 
-### Making a Progressive Web App
+### Train the Machine Learning Model:
+This step is crucial as it generates the model.pkl and vectorizer.pkl files that your Flask app needs to load.
+```
+python train_model.py
+```
+### Run the Flask Backend Server:
+```
+# For local development with Flask's built-in server (useful for debugging):
+python app.py
+```
+# For a production-like local environment using Gunicorn:
+### (Ensure your virtual environment is active and gunicorn is installed)
+gunicorn app:app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The Flask server will typically run on http://localhost:5000.
 
-### Advanced Configuration
+3. Frontend Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Open a new terminal window (keep your backend server running in the first terminal) and navigate to the frontend directory. Install dependencies and start the development server.
+```
+cd ../frontend
+```
+Install Frontend Dependencies:
+```
+npm install
+```
+Start the React Development Server:
+```
+npm start
+```
+The React app will typically open automatically in your browser at http://localhost:3000.
 
-### Deployment
+(Note: When running both frontend and backend locally, ensure your frontend's API calls are pointed to http://localhost:5000 or whatever port your Flask backend is running on locally. For deployed versions, they use the Render URL.)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to connect with me:
+[Rahil Patel](https://www.linkedin.com/in/rahilpatel1809/)
