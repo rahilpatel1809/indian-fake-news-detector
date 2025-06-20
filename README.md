@@ -55,20 +55,18 @@ To run this project on your local machine for development, follow these steps:
 First, clone the project from GitHub and navigate into the main directory:
 
 ```bash
-git clone [https://github.com/rahilpatel1809/indian-fake-news-detector.git](https://github.com/rahilpatel1809/indian-fake-news-detector.git)
+git clone https://github.com/rahilpatel1809/indian-fake-news-detector.git
 cd indian-fake-news-detector
 ```
 
 ### 2. Backend Setup
 
 Navigate to the backend directory, set up a virtual environment, install dependencies, ensure the dataset is present, train the model, and start the server.
-
 ```bash
 cd backend
 ```
 
 Create and Activate Virtual Environment (Recommended):
-
 #### On Windows:
 ```
 python -m venv venv
@@ -98,13 +96,13 @@ python train_model.py
 # For local development with Flask's built-in server (useful for debugging):
 python app.py
 ```
-# For a production-like local environment using Gunicorn:
+### For a production-like local environment using Gunicorn:
 ### (Ensure your virtual environment is active and gunicorn is installed)
 gunicorn app:app
 
 The Flask server will typically run on http://localhost:5000.
 
-3. Frontend Setup
+### 3. Frontend Setup
 
 Open a new terminal window (keep your backend server running in the first terminal) and navigate to the frontend directory. Install dependencies and start the development server.
 ```
