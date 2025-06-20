@@ -1,4 +1,4 @@
-# FactCheck: Fake News Detector
+# Indian Fake News Detector Web App
 
 This is a full-stack web application designed to detect fake news headlines. It features a React frontend for user interaction and a Flask backend powered by a machine learning model for prediction.
 
