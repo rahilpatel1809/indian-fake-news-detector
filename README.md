@@ -14,8 +14,7 @@ Experience the live application:
 * Detects fake/real news headlines using a pre-trained machine learning model.
 * Provides confidence scores for predictions (e.g., "Fake: 95.23%", "Real: 4.77%").
 * Interactive and responsive user interface built with React.js and Tailwind CSS.
-* Includes a dark/light mode toggle for enhanced user experience.
-* Displays a "Dataset Viewer" page for exploring examples of news headlines.
+* Displays a "Dataset Viewer" page for exploring the dataset of news headlines on which the model was trained.
 
 ## Technologies Used
 
