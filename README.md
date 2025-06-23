@@ -7,19 +7,17 @@ This is a full-stack web application designed to detect fake news headlines. It 
 Experience the live application:
 
 * **Frontend (User Interface):** [https://indian-fake-news-detector.vercel.app](https://indian-fake-news-detector.vercel.app)
-* **Backend (API Endpoint):** [https://indian-fake-news-detector.onrender.com](https://indian-fake-news-detector.onrender.com)
+* **Backend (API Endpoint):** [https://indian-fake-news-detector.onrender.com](https://indian-fake-news-detector.up.railway.app)
 
 ## Screenshots
-
-Due to Render’s free tier limitations, the backend API goes to sleep after a few minutes of inactivity. It may take 30–60 seconds to restart on the first request.
 
 To give you an idea of how the app works, here are some screenshots of the interface and predictions:
 
 ### Fake News Prediction Example
-<img src="detection-1.png" alt="Fake News Detection" width="800">
+<img src="screenshots/detection-1.png" alt="Fake News Detection" width="800">
 
 ### Dataset Viewer
-<img src="dataset-1.png" alt="Dataset Viewer" width="800">
+<img src="screenshots/dataset-1.png" alt="Dataset Viewer" width="800">
 
 
 ## Features
@@ -55,7 +53,7 @@ This project leverages a modern full-stack architecture:
 
 ### Deployment & Version Control
 * **Frontend Hosting:** Vercel
-* **Backend Hosting:** Render
+* **Backend Hosting:** Railway
 * **Version Control:** Git
 * **Repository Hosting:** GitHub
 
@@ -97,7 +95,7 @@ pip install -r requirements.txt
 ```
 
 ### Ensure Dataset is Present:
-Make sure the news_dataset.csv file is present in the backend/ directory. This file is crucial for train_model.py. If it's not present from the clone, you might need to download it from the Kaggle link provided above and place it in the backend/ folder.
+Make sure the news_dataset.csv file is present in the `backend/` directory. This file is crucial for train_model.py. If it's not present from the clone, you might need to download it from the Kaggle link provided above and place it in the backend/ folder.
 
 ### Train the Machine Learning Model:
 This step is crucial as it generates the model.pkl and vectorizer.pkl files that your Flask app needs to load.
@@ -111,9 +109,9 @@ python app.py
 ```
 ### For a production-like local environment using Gunicorn:
 ### (Ensure your virtual environment is active and gunicorn is installed)
-gunicorn app:app
+`gunicorn app:app`
 
-The Flask server will typically run on http://localhost:5000.
+The Flask server will typically run on `http://localhost:5000`.
 
 ### 3. Frontend Setup
 
@@ -129,9 +127,9 @@ Start the React Development Server:
 ```
 npm start
 ```
-The React app will typically open automatically in your browser at http://localhost:3000.
+The React app will typically open automatically in your browser at `http://localhost:3000`.
 
-(Note: When running both frontend and backend locally, ensure your frontend's API calls are pointed to http://localhost:5000 or whatever port your Flask backend is running on locally. For deployed versions, use the Render URL.)
+(Note: When running both frontend and backend locally, ensure your frontend's API calls are pointed to `http://localhost:5000` or whatever port your Flask backend is running on locally. For deployed versions, use the Railway URL.)
 
 Feel free to connect with me:
 [Rahil Patel](https://www.linkedin.com/in/rahilpatel1809/)
