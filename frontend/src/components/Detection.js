@@ -9,7 +9,7 @@ export default function Detection() {
     setLoading(true);
     setResult(null);
     try {
-      const res = await fetch("https://indian-fake-news-detector.onrender.com/predict", {
+      const res = await fetch("https://indian-fake-news-detector.up.railway.app/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ headline }),
