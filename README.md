@@ -7,7 +7,7 @@ This is a full-stack web application designed to detect fake news headlines. It 
 Experience the live application:
 
 * **Frontend (User Interface):** [https://indian-fake-news-detector.vercel.app](https://indian-fake-news-detector.vercel.app)
-* **Backend (API Endpoint):** [https://indian-fake-news-detector.onrender.com](https://indian-fake-news-detector.up.railway.app)
+* **Backend (API Endpoint):** [https://indian-fake-news-detector.up.railway.app](https://indian-fake-news-detector.up.railway.app)
 
 ## Screenshots
 
