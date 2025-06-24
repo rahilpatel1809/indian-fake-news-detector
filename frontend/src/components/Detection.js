@@ -63,7 +63,7 @@ export default function Detection() {
             marginTop: "0.5rem", 
           }}
         >
-          📰 Fake News Detector
+          📰 Indian Fake News Detector
         </h1>
         <input
           type="text"
@@ -97,7 +97,7 @@ export default function Detection() {
             marginBottom: "1.5rem", 
           }}
         >
-          {loading ? "Checking..." : "Check News"}
+          {loading ? "Detecting..." : "Detect News"}
         </button>
 
         {}
