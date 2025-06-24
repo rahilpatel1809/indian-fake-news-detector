@@ -9,8 +9,8 @@ CORS(app)
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(BASE_DIR, "model.pkl")
 
+model_path = os.path.join(BASE_DIR, "model.pkl")
 model = pickle.load(open(model_path, "rb"))
 
 vectorizer_path = os.path.join(BASE_DIR, "vectorizer.pkl")
@@ -19,7 +19,7 @@ vectorizer = pickle.load(open(vectorizer_path, "rb"))
 
 @app.route('/')
 def home():
-    return "Fake News Detector is Running!"
+    return "Indian Fake News Detector is Running!"
 
 @app.route('/predict', methods=['POST'])
 def predict():
