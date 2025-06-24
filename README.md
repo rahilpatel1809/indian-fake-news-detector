@@ -1,19 +1,19 @@
 # Indian Fake News Detector Web App
 
-This is a full-stack web application designed to detect fake news headlines. It features a React frontend for user interaction and a Flask backend powered by a machine learning model for prediction.
+This is a full-stack web application that classifies Indian news headlines as Real or Fake using a Logistic Regression model trained on TF-IDF vectors of Indian news data. It features a React frontend for user interaction and a Flask backend powered by a machine learning model for prediction.
 
 ## Live Demo
 
 Experience the live application:
 
-* **Frontend (User Interface):** [https://indian-fake-news-detector.vercel.app](https://indian-fake-news-detector.vercel.app)
-* **Backend (API Endpoint):** [https://indian-fake-news-detector.up.railway.app](https://indian-fake-news-detector.up.railway.app)
+* **Frontend (User Interface):** [indian-fake-news-detector.vercel.app](https://indian-fake-news-detector.vercel.app)
+* **Backend (API Endpoint):** [indian-fake-news-detector.up.railway.app](https://indian-fake-news-detector.up.railway.app)
 
 ## Screenshots
 
 To give you an idea of how the app works, here are some screenshots of the interface and predictions:
 
-### Fake News Prediction Example
+### Detection Page
 <img src="screenshots/detection-1.png" alt="Fake News Detection" width="800">
 
 ### Dataset Viewer
