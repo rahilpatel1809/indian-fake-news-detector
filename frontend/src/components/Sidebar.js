@@ -35,8 +35,7 @@ export default function Sidebar() {
 
   return (
     <div
-      className="w-64 bg-gray-900 text-white p-8 flex flex-col shadow-lg"
-      style={{ position: "sticky", top: 0, height: "100vh", justifyContent: "flex-start" }}
+      className="w-64 bg-gray-900 text-white p-8 flex flex-col min-h-screen shadow-lg"
     >
       <h2 className="text-3xl font-extrabold mb-12 text-indigo-400 text-center">
         Menu

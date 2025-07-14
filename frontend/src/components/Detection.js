@@ -24,17 +24,7 @@ export default function Detection() {
   };
 
   return (
-    <div
-      style={{
-        background: "linear-gradient(to right, #4f46e5, #8b5cf6)",
-        padding: "20px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-      }}
-    >
-      {}
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
       <div
         style={{
           background: "#fff",
