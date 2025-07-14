@@ -8,7 +8,7 @@ export default function App() {
     <Router>
       <div style={{ display: "flex" }}>
         <Sidebar />
-        <div style={{ flex: 1, padding: "20px" }}>
+        <div style={{ flex: 1 }}>
           <Routes>
             <Route path="/" element={<Navigate to="/detection" />} />
             <Route path="/detection" element={<Detection />} />

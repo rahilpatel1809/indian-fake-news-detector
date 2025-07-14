@@ -26,13 +26,12 @@ export default function Detection() {
   return (
     <div
       style={{
-        minHeight: "100vh",
+        background: "linear-gradient(to right, #4f46e5, #8b5cf6)",
+        padding: "20px",
         display: "flex",
-        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        background: "linear-gradient(to right, #4f46e5, #8b5cf6)",
-        padding: "1rem",
+        width: "100%",
       }}
     >
       {}
