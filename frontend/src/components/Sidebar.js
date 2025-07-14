@@ -65,7 +65,7 @@ export default function Sidebar() {
         <p className="text-white text-md font-semibold mb-3">Created by Rahil Patel</p>
         <div className="flex justify-center space-x-6">
           <a
-            href="https://www.linkedin.com/in/rahilpatel1809"
+            href="https://linkedin.com/in/rahilpatel1809"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-indigo-400 transition-colors duration-300"
