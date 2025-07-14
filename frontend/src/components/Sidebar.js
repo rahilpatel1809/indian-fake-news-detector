@@ -1,6 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-import linkedinLogo from '../frontend/public/icons8-linkedin.svg';
-import githubLogo from '../frontend/public/icons8-github.svg';
 
 export default function Sidebar() {
   const location = useLocation();
@@ -64,7 +62,7 @@ export default function Sidebar() {
       </nav>
 
       <div className="mt-auto text-center text-sm text-gray-500 pt-8 border-t border-gray-700">
-        <p className="text-white text-md font-semibold mb-3">Created by Rahil Patel 😎</p>
+        <p className="text-white text-md font-semibold mb-3">Created by Rahil Patel</p>
         <div className="flex justify-center space-x-6">
           <a
             href="https://www.linkedin.com/in/rahilpatel1809"
@@ -73,8 +71,7 @@ export default function Sidebar() {
             className="text-gray-400 hover:text-indigo-400 transition-colors duration-300"
             aria-label="LinkedIn"
           >
-            {/* Use the imported SVG as an <img> tag */}
-            <img src={linkedinLogo} alt="LinkedIn" className="h-8 w-8" />
+            <img src="/icons8-linkedin.svg" alt="LinkedIn" className="h-8 w-8" />
           </a>
           <a
             href="https://github.com/rahilpatel1809"
@@ -83,8 +80,7 @@ export default function Sidebar() {
             className="text-gray-400 hover:text-indigo-400 transition-colors duration-300"
             aria-label="GitHub"
           >
-            {/* Use the imported SVG as an <img> tag */}
-            <img src={githubLogo} alt="GitHub" className="h-8 w-8" />
+            <img src="/icons8-github.svg" alt="GitHub" className="h-8 w-8" />
           </a>
         </div>
       </div>
