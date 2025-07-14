@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import linkedinLogo from 'frontend\public\icons8-linkedin.svg';
-import githubLogo from 'frontend\public\icons8-github.svg';
+import linkedinLogo from '../frontend/public/icons8-linkedin.svg';
+import githubLogo from '../frontend/public/icons8-github.svg';
 
 export default function Sidebar() {
   const location = useLocation();
