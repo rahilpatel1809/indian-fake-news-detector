@@ -7,7 +7,7 @@ This is a full-stack web application that classifies Indian news headlines as Re
 Experience the live application:
 
 * **Frontend (User Interface):** [indian-fake-news-detector.vercel.app](https://indian-fake-news-detector.vercel.app)
-* **Backend (API Endpoint):** [indian-fake-news-detector.onrender.com]([https://indian-fake-news-detector.onrender.com])
+* **Backend (API Endpoint):** [indian-fake-news-detector.onrender.com](https://indian-fake-news-detector.onrender.com)
 
 ## Screenshots
 
