@@ -7,7 +7,7 @@ This is a full-stack web application that classifies Indian news headlines as Re
 Experience the live application:
 
 * **Frontend (User Interface):** [indian-fake-news-detector.vercel.app](https://indian-fake-news-detector.vercel.app)
-* **Backend (API Endpoint):** [indian-fake-news-detector.up.railway.app](https://indian-fake-news-detector.up.railway.app)
+* **Backend (API Endpoint):** [indian-fake-news-detector.onrender.com]([https://indian-fake-news-detector.onrender.com])
 
 ## Screenshots
 
@@ -53,7 +53,7 @@ This project leverages a modern full-stack architecture:
 
 ### Deployment & Version Control
 * **Frontend Hosting:** Vercel
-* **Backend Hosting:** Railway
+* **Backend Hosting:** Render
 * **Version Control:** Git
 * **Repository Hosting:** GitHub
 
